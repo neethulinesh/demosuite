@@ -3,7 +3,7 @@ class RegisterController extends \BaseController{
 
 	//get action for the add
 	public function getAdd(){
-		return View::make('login')->with('message','Thanks for registering!!');
+		return View::make('home');
 	}
 
 	//post action for the add
@@ -12,7 +12,7 @@ class RegisterController extends \BaseController{
 		$validator = Validator::make(Input::all(),array(
 				 'fname'       => 'required|min:3',
 				 'lname'       => 'required|min:3',
-				'email' 		=> 'email|required|unique:register',
+				'email' 		=> 'email|required|unique:user',
 				'password'   => 'required|min:6|same:cpassword',
 				'cpassword'  => 'required|min:6'
 			)
@@ -20,7 +20,7 @@ class RegisterController extends \BaseController{
 
 		if($validator->fails()){
 			//show errors
-			return Redirect::route('post-add-post')->withErrors($validator)->withInput();
+			return Redirect::route('RegisterController')->withErrors($validator)->withInput();
 		}else{
 			//insert a record
 			$fname = Input::get('fname');
@@ -34,14 +34,14 @@ class RegisterController extends \BaseController{
 			$post->fname= $fname;
 			$post->lname= $lname;
 			$post->email = $email;
-			$post->password = $password;
+			$post->password =Hash::make($password);
 			$post->cpassword = $cpassword;
 
 			$post->save();
 			//return View::make('lo');
 			 //return Redirect::route('post-add-get');
 			//->with('global','Saved Successfully!');
-		  return $this->getadd();
+		  return Redirect::route('UserController')->with('message','Thanks for registering');
 		}
 	}
 }

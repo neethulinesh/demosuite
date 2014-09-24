@@ -15,6 +15,14 @@
   </head>
  
   <body>
- 
+    <div id="tooplate_wrapper">
+  <span id="top"></span>
+  <div id="tooplate_header">
+      <div id="site_title"><h1><a rel="nofollow" href="http://www.tooplate.com">Free Website Templates</a></h1></div>
+        <div id="tooplate_menu">
+  <ul>
+               <li>{{ HTML::link('register', 'Register') }}</li>  
+                    <li>{{ HTML::link('login', 'Login') }}</li>   
+            </ul> 
   </body>
 </html>

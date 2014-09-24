@@ -39,7 +39,7 @@ $(document).ready(function ()
     	<div id="site_title"><h1><a rel="nofollow" href="http://www.tooplate.com">Free Website Templates</a></h1></div>
         <div id="tooplate_menu">
             <ul>
-               <li>{{ HTML::link('reg', 'Register') }}</li>  
+               <li>{{ HTML::link('register', 'Register') }}</li>  
                     <li>{{ HTML::link('login', 'Login') }}</li>   
             </ul>    	
         </div> <!-- end of tooplate_menu -->

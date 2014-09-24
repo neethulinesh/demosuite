@@ -1,20 +1,20 @@
 @extends('master')
 @section('content')
-{{ Form::open(array("URL::route('login')")) }}
+{{ Form::open(array("URL::route('post-add-get ')")) }}
 <fieldset class="boxBody">
   <div class="fields"> 
-      {{ Form::label('uname', 'UserName') }}
-      {{ Form::text('uname') }}
+      {{ Form::label('email', 'Enter username') }}
+      {{ Form::text('email') }}
 
-      @if($errors->has('uname'))
-        <p class="error">{{ $errors->first('uname') }}</p>
+      @if($errors->has('email'))
+        <p class="error">{{ $errors->first('email') }}</p>
       @endif
     </div>
      <div class="fields"> 
-      {{ Form::label('pswd', 'Password') }}
-      {{ Form::text('pswd') }}
-      @if($errors->has('pswd'))
-        <p class="error">{{ $errors->first('pswd') }}</p>
+      {{ Form::label('password', 'Password') }}
+      {{ Form::password('password') }}
+      @if($errors->has('password'))
+        <p class="error">{{ $errors->first('password') }}</p>
       @endif
     </div>  
     <div class="fields"> 

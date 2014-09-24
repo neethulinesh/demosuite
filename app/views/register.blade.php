@@ -32,6 +32,8 @@
   
 
 </body> -->
+
+
 <?php //echo Form::open(array('url' => 'post-add-post', 'class' => 'box login')); ?>
 @extends('master')
 @section('content')
@@ -63,14 +65,14 @@
     </div>
   <div class="fields"> 
       {{ Form::label('password', 'Password') }}
-      {{ Form::text('password') }}
+      {{ Form::password('password') }}
       @if($errors->has('password'))
-        <p class="error">{{ $errors->first('password') }}</p>
+        <p class="error">{{ $errors->first('password')}}</p>
       @endif
     </div>  
     <div class="fields"> 
       {{ Form::label('cpassword', 'Confirm Password') }}
-      {{ Form::text('cpassword') }}
+      {{ Form::password('cpassword') }}
       @if($errors->has('cpassword'))
         <p class="error">{{ $errors->first('cpassword') }}</p>
       @endif
