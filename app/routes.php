@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('doctor','DoctorController');
+
 Route::get('/', array('as' => 'HomeController', function () {
     return View::make('master');
 }));
@@ -33,17 +35,50 @@ Route::get('login', array('as' => 'UserController', function () {
 }));
 
 Route::post('login', array(
-    'as'=>'post-add-get',
+    'as'=>'post-addget',
     'uses'=>'UserController@postlogin'
     )
 );
-Route::get('dashboard', array(
-    'as'=>'post-add',
-    function(){
-        return View::make('dashboard');
-    }
+// Route::get('dashboard',array(
+//     'as'=>'DoctorController',function(){
+//         return View::make('dashboard');
+//     }));
+// Route::get('dashboard',array(
+//         'as'=>'post-add',
+//             'uses'=>'DoctorController@index'
+//     ));
+// Route::get('create',array(
+//         'as'=>'post-create',
+//             'uses'=>'DoctorController@create'
+//     ));
+// Route::post('create',array(
+//         'as'=>'post-create',
+//             'uses'=>'DoctorController@create'
+//     ));
+// Route::get('store',array(
+//         'as'=>'post-store',
+//             'uses'=>'DoctorController@store'
+//     ));
+// Route::post('store',array(
+//         'as'=>'post-store',
+//             'uses'=>'DoctorController@store'
+//     ));
+// Route::get('update',array(
+//         'as'=>'post-update',
+//             'uses'=>'DoctorController@update'
+//     ));
+// Route::post('update',array(
+//         'as'=>'post-update',
+//             'uses'=>'DoctorController@update'
+//     ));
+// Route::get('dashboard', array(
+//     'as'=>'post-add',
+//     function(){
+//         return View::make('dashboard');
+//     }
     
-));
+// ));
+
 
 
 

@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-{{ Form::open(array("URL::route('post-add-get ')")) }}
+{{ Form::open(array("URL::route('post-addget')")) }}
 <fieldset class="boxBody">
   <div class="fields"> 
       {{ Form::label('email', 'Enter username') }}

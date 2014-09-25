@@ -11,24 +11,24 @@ class UserController extends BaseController
 			'email'=> 'email|required',
 				'password'   => 'required'
 			));
-		// if($validator->fails())
-		// {
-		// 	//show errors
-		// 	return Redirect::route('UserController')->withErrors($validator)->withInput();
-		// }
-		// else
+		if($validator->fails())
+		{
+			//show errors
+			return Redirect::route('UserController')->withErrors($validator)->withInput();
+		}
+		else
 		{
 			$userdata=array('email'=>Input::get('email'), 'password'=>Input::get('password'));
 		}
 		 if (Auth::attempt($userdata) )
 		{
-		          return Redirect::route('post-add')->with('message', 'You are now logged in!');	    
+		          return Redirect::route('doctor.index');	    
 		}
 		 else 
 		 {
    				 
    				 
-   				 return Redirect::to('login');
+   				 return Redirect::route('post-add-get');
 
 
 		}
