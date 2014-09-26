@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Adddepartment' => $baseDir . '/app/database/migrations/2014_09_26_064012_adddepartment.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -41,8 +42,9 @@ return array(
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DataController' => $baseDir . '/app/controllers/DataController .php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'Department' => $baseDir . '/app/database/migrations/2014_09_26_054419_department.php',
     'Details' => $baseDir . '/app/models/Details.php',
-    'Doctor' => $baseDir . '/app/database/migrations/2014_09_25_051018_doctor.php',
+    'Doctor' => $baseDir . '/app/database/migrations/2014_09_26_054512_doctor.php',
     'DoctorController' => $baseDir . '/app/controllers/DoctorController.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -1567,7 +1569,7 @@ return array(
     'System_SSH_Agent' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'System_SSH_Agent_Identity' => $vendorDir . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
     'TestCase' => $baseDir . '/app/tests/TestCase.php',
-    'User' => $baseDir . '/app/database/migrations/2014_09_24_072725_user.php',
+    'User' => $baseDir . '/app/database/migrations/2014_09_26_054313_user.php',
     'UserController' => $baseDir . '/app/controllers/UserController.php',
     'UserTableSeeder' => $baseDir . '/app/database/seeds/UserTableSeeder.php',
     'Users' => $baseDir . '/app/models/Users.php',

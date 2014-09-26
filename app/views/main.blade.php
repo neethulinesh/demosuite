@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,4 +25,4 @@
                     <li>{{ HTML::link('login', 'Login') }}</li>   
             </ul> 
   </body>
-</html>
+</html> -->

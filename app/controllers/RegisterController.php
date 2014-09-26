@@ -44,4 +44,4 @@ class RegisterController extends \BaseController{
 		  return Redirect::route('UserController')->with('message','Thanks for registering');
 		}
 	}
-}
+}	

@@ -39,22 +39,32 @@ $(document).ready(function ()
     	<div id="site_title"><h1><a rel="nofollow" href="http://www.tooplate.com">Free Website Templates</a></h1></div>
         <div id="tooplate_menu">
             <ul>
-               <li>{{ HTML::link('register', 'Register') }}</li>  
+               <li>{{ HTML::link('register', 'New User') }}</li>  
                     <li>{{ HTML::link('login', 'Login') }}</li>   
             </ul>    	
         </div> <!-- end of tooplate_menu -->
+       <div class="container">
+        @if(Session::has('message'))
+            <p class="alert">{{ Session::get('message') }}</p>
+        @endif
+        
+        @yield('content')
+    </div>
+<!-- 
+    </div>
         <div class="cleaner"></div>
-    </div> <!-- end of header -->
+    </div> end of header
     
     <div id="tooplate_main">
     	
-        <span id="home"></span>
-        <div class="content">
+        <span id="home"></span> -->
+
+        <!-- <div class="content">
     		<h2>Welcome to Digital Mini Theme</h2>
             <p><em>Sed sit amet elit quis arcu tincidunt auctor nec eu tellus. Morbi feugiat euismod velit, in feugiat nisl vulputate at. Sed est lacus, faucibus non tempus ut, tincidunt in orci. </em></p>
             <p>Digital Mini is a free <a rel="nofollow" href="http://www.tooplate.com">website template</a> for everyone. You may edit and apply this template for any purpose. Credits go to <a rel="nofollow" href="http://www.photovaco.com" target="_blank">Free Photos</a> for photos and <a rel="nofollow" href="http://www.icojoy.com" target="_blank">icojoy.com</a> for icons. Duis lectus enim, fermentum et ullamcorper eget, varius non velit. Proin sagittis tempor enim, sit amet mattis lectus facilisis et. Nulla adipiscing massa eget sapien tempor eget ultricies nulla mollis. Donec accumsan feugiat tristique. </p>
-            <div class="cleaner h30"></div>
-            
+            <div class="cleaner h30"></div> -->
+          <!--   
             <div class="col_w330 float_r">
                 <h3>What We Do</h3>
                 <ul class="service_list">
@@ -65,19 +75,19 @@ $(document).ready(function ()
                     <li><a href="#" class="service_five">Maecenas ut pretium</a></li> 
                     <li><a href="#" class="service_six">Phasellus tempus ullamcorper</a></li>   
                 </ul>
-            </div>
-            <div class="col_w330 float_l">
+            </div> -->
+           <!--  <div class="col_w330 float_l">
             	<h3>New Design</h3>
 	            <img class="image_wrapper" src="images/tooplate_image_01.jpg" alt="Image 01" />
                 <p>Suspendisse ut dapibus est. Nunc elit mauris, viverra nec auctor quis, posuere id lectus. Integer iaculis nisl sed elit dignissim sed lobortis erat commodo.</p>
-			</div>
-            <div class="cleaner h30"></div>
+			</div> -->
+           <!--  <div class="cleaner h30"></div>
             <a class="gototop" href="#top"></a>
             <div class="cleaner"></div>
     	</div>
         
-        <span id="about"></span>
-        <div class="content">
+        <span id="about"></span> -->
+        <!-- <div class="content">
     		<h2>About Us</h2>
             <p><em>Duis pulvinar dolor ut mi faucibus dignissim. Cras sem ante, fermentum sit amet imperdiet ac, auctor ut nisl. Ut condimentum elementum mollis. Maecenas egestas ullamcorper purus nec dignissim.</em></p>
             <p>Donec vel leo urna, interdum condimentum lectus. Ut suscipit, nisl ut luctus luctus, sem magna ultricies dui, et molestie purus elit sed velit. Nulla eget elit nunc. <a href="#">Sed vulputate</a> dictum sapien, vitae facilisis massa fringilla sed. Donec consectetur, felis ut elementum interdum, neque est luctus dolor, volutpat tristique nunc enim vitae velit. Nullam tristique molestie libero <a href="#">sit amet tempus</a>. Ut ut ante vitae magna facilisis commodo hendrerit sed elit. </p>
@@ -96,9 +106,9 @@ $(document).ready(function ()
             <div class="cleaner h30"></div>
             <a class="gototop" href="#top"></a>
             <div class="cleaner"></div>
-    	</div>
+    	</div> -->
         
-        <span id="services"></span>
+    <!--     <span id="services"></span>
         <div class="content">
     		<h2>Services</h2>
             <p><em>Aenean enim dui, sagittis quis sollicitudin eget, varius nec eros. In eget justo sit amet libero egestas suscipit a non ligula. Proin non felis tempus urna euismod cursus. Nulla eget elit nunc. </em></p>
@@ -129,9 +139,9 @@ $(document).ready(function ()
             <div class="cleaner h30"></div>
             <a class="gototop" href="#top"></a>
             <div class="cleaner"></div>
-    	</div>
+    	</div> -->
         
-        <span id="portfolio"></span>
+       <!--  <span id="portfolio"></span>
         <div class="content">
     		<h2>Portfolio</h2>
             <p><em>Aliquam pellentesque urna a sapien condimentum hendrerit. Morbi magna mi, suscipit non tincidunt a, iaculis in nulla. Duis rhoncus mollis quam ut faucibus. Nulla ac diam augue.</em></p>
@@ -153,16 +163,16 @@ $(document).ready(function ()
             <div class="cleaner h30"></div>
             <a class="gototop" href="#top"></a>
             <div class="cleaner"></div>
-    	</div>
+    	</div> -->
         
-        <span id="contact"></span>
+      <!--   <span id="contact"></span>
         <div class="content">
     		<h2>Contact Information</h2>
             <p><em>Praesent rutrum augue vel felis vehicula vel luctus sapien commodo. Aenean convallis, sem in tempus dictum, lorem urna luctus augue, et tempor justo orci in elit. Nam a pretium libero.</em></p>
             
-            <div class="cleaner h30"></div>
+            <div class="cleaner h30"></div> -->
             
-           <div class="col_w330 float_l">
+        <!--    <div class="col_w330 float_l">
                 <h4>Write a message to us</h4>
                 <div id="contact_form">
                 <form method="post" name="contact" action="#">
@@ -185,8 +195,8 @@ $(document).ready(function ()
 				</form>               
                 </div> 
             </div>
-            
-          	<div class="col_w330 float_r">
+             -->
+          <!-- 	<div class="col_w330 float_r">
                 <h4>Our Location</h4>
 				
                 <div id="map" class="image_wrapper"><a href="images/map_big.jpg" title="Map"><img width="300" height="200" src="images/map_thumb.jpg" alt="Location Map" class="image_wrapper" /></a></div>                
@@ -201,13 +211,13 @@ $(document).ready(function ()
 				<b>Phone:</b> 010-040-1520<br />
             	<b>Email:</b> <a href="mailto:info@company.com">info@company.com</a>            
 			</div>    	
-    			
-            <div class="cleaner h30"></div>
+    			 -->
+           <!--  <div class="cleaner h30"></div>
             <a class="gototop" href="#top"></a>
             <div class="cleaner"></div>
     	</div>
     
-    </div> <!-- end of main -->
+    </div> --> <!-- end of main -->
     <!-- <div>
          @if(Auth::user())
          <li class="sample">{{ ucwords(Auth::user()->username) }}
@@ -221,19 +231,15 @@ $(document).ready(function ()
              
              
     </div> -->
-    <div class="container">
-        @if(Session::has('message'))
-            <p class="alert">{{ Session::get('message') }}</p>
-        @endif
-    </div>
+
  
-    <div id="tooplate_footer">
+  <!--   <div id="tooplate_footer">
     
         Copyright © 2048 <a href="#">Company Name</a> - Designed by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Website Templates</a>
     
-    </div> <!-- end of tooplate_footer -->
+    </div> < --><!-- !-- end of tooplate_footer --> 
 
-</div> <!-- end of wrapper -->
+<!-- </div>  --><!-- end of wrapper -->
 
 </body>
 </html>

@@ -1,40 +1,10 @@
 
-<html>
+<!-- <html>
     <head>
         {{ HTML::script('login/js/index.js')}}
         {{ HTML::style('login/css/reset.css')}}
         {{ HTML::style('login/css/style.css')}}
-    </head>
-
-
-<!-- <body>
-
-  <div class="wrap">
-    <div class="avatar">
-      <img src="http://cdn.ialireza.me/avatar.png">
-    </div>
-    
-<?php //echo Form::open(array('url' => '/valid', 'class' => 'box login')); ?>
-    
-     {{ Form::text('username','',array('placeholder'=>'username'))}}
-    <div class="bar">
-      <i></i>
-    </div>
-    {{ Form::text('password','',array('placeholder'=>'password'))}}
-    
-    {{ Form::submit('login')}}
-
-       
-
-    {{ Form::close()  }}
-
-
-  
-
-</body> -->
-
-
-<?php //echo Form::open(array('url' => 'post-add-post', 'class' => 'box login')); ?>
+    </head> -->
 @extends('master')
 @section('content')
 {{ Form::open(array("URL::route('postadd')")) }}
@@ -77,17 +47,17 @@
         <p class="error">{{ $errors->first('cpassword') }}</p>
       @endif
     </div>  
-<div class="fields"> 
+    <div class="fields"> 
       <label>&nbsp;</label>
       {{ Form::submit('Submit',array('class'=>'button')) }}
     </div>      
     {{ Form::close()}}
   </div>
-<footer id="main">
+<!-- <footer id="main">
 </footer>
 </body>
 </html>
-
-</html>
+ -->
+<!-- </html> -->
 
 
